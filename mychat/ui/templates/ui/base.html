@@ -1,0 +1,24 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SimpleChat</title>
+    <link type="text/css" rel="stylesheet" href="{%static 'ui/css/bootstrap.css'%}"/>
+    <link type="text/css" rel="stylesheet" href="{%static 'ui/css/theme.css'%}"/>
+    <link type="text/css" rel="stylesheet" href="{%static 'ui/css/style.css'%}"/>
+</head>
+<body>
+    <div id="content" class="contaner">
+            <div class="col-md-12">
+                {% block content %}{% endblock %}
+            </div>
+    </div>
+
+    <script src="{% static 'ui/js/jquery.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'ui/js/bootstrap.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'ui/js/handlebars-v1.3.0.js' %}" type="text/javascript"></script>
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
